@@ -1,0 +1,240 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px; /* Hidden off-screen */
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0; /* Becomes visible on focus */
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #5c7ca8; /* Màu nền đậm hơn cho nav */
+  padding: 15px 0; /* Tăng padding */
+  margin-bottom: 25px; /* Tăng margin dưới */
+  border-radius: 5px; /* Giảm bo tròn góc */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    background: #444;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.75rem 1.5rem; 
+    display: block; 
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #555;
+}
+
+/* Main Content Styles */
+main {
+  background-color: #fdfdfd; /* Màu nền trắng hơn cho main */
+  font-size: 1.15em; /* Tăng nhẹ font-size */
+  padding: 25px; /* Tăng padding */
+  margin: 25px; /* Tăng margin */
+  border-radius: 8px; /* Điều chỉnh bo tròn góc */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Thêm box-shadow nhẹ */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* --- Grid Container for images (e.g., in parks.html) --- */
+.image-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 25px; /* Increased gap for better frame visibility */
+    padding: 20px;
+    border: none; /* Removed default border to let frames stand out */
+    margin-top: 20px;
+}
+
+.image-grid-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures proper block-level behavior for styling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Different Image Frame Styles --- */
+.img-frame-simple {
+    border: 3px solid #ddd;
+    padding: 5px; /* Space between image and border */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.img-frame-polaroid {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 10px 20px 10px; /* Polaroid bottom padding */
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+    transform: rotate(-2deg); /* Slight rotation for polaroid effect */
+}
+
+.img-frame-polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.img-frame-shadow {
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.img-frame-circle {
+    border-radius: 50%;
+    object-fit: cover; /* Important for circular images to not distort */
+    width: 200px; /* Fixed size for circle, adjust as needed */
+    height: 200px; /* Fixed size for circle, adjust as needed */
+    border: 5px solid #66aaff;
+    padding: 3px;
+    background-color: #fff;
+    margin: 0 auto; /* Center if grid cell is wider */
+}
+
+.image-grid-container .img-frame-circle {
+    justify-self: center; /* Center the circular image within its grid cell */
+}
+
+.img-frame-inset {
+    border: 10px solid #e0e0e0;
+    padding: 5px;
+    background: #f0f0f0;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* --- Flex Container for images (e.g., in neighborhood.html) --- */
+.image-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items on the line */
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid #eee;
+    margin-top: 20px;
+}
+
+.image-flex-container img {
+    width: 150px; /* Fixed width for flex items, adjust as needed */
+    height: 150px;
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* --- Generic Grid (from your new index.html example) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #5c9aff;
+    color: white;
+    padding: 20px;
+    border: 1px solid #4a80d1;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* --- Generic Flexbox (from your new index.html example) --- */
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    min-height: 150px;
+}
+
+.flex-item {
+    background-color: #ff8c5c;
+    color: white;
+    padding: 15px 25px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Basic Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; 
+        text-align: center;
+    }
+
+    .flex-container, .image-flex-container {
+        flex-direction: column; 
+    }
+     .image-flex-container img {
+        width: 80%; /* Adjust for stacked view */
+        height: auto;
+    }
+
+    .grid-container, .image-grid-container {
+        grid-template-columns: 1fr; 
+    }
+}
